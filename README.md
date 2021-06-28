@@ -13,7 +13,7 @@ minikube start --driver=hyperv --memory 8192 --cpus 6
 # Switch Context:
     kubectl config use-context <context_name>
 
-
+# For Argo related setup
 helm upgrade --install argo-cd charts/argo-cd/
 
 kubectl port-forward svc/argo-cd-argocd-server 8080:443
