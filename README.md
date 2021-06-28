@@ -16,5 +16,14 @@ minikube start --driver=hyperv --memory 8192 --cpus 6
 
 helm upgrade --install argo-cd charts/argo-cd/
 
+kubectl port-forward svc/argo-cd-argocd-server 8080:443
+
+URL : http://localhost:8080
+Username : admin
+Password : [kubectl get pods -l app.kubernetes.io/name=argocd-server -o name]
+
+
+helm template apps/ | kubectl apply -f -
+
 Referred Links
 https://www.arthurkoziel.com/setting-up-argocd-with-helm/
