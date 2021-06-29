@@ -18,6 +18,5 @@ spec:
     repoURL: https://github.com/deepali-personal/argo-example.git
     targetRevision: main
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    syncOptions:
+    - ApplyOutOfSyncOnly=true

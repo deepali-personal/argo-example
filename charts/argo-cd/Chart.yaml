@@ -1,5 +1,6 @@
 apiVersion: v2
-name: argo-cd
+name: argo-stack
+description: Installs and configures Argo CD to manage resources and deployments via GitOps
 version: 1.0.0
 dependencies:
   - name: argo-cd
